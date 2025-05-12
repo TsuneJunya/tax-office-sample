@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>田中太郎税理士事務所 - お問い合わせ</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <div class="logo-text-group">
+                  <span class="logo-text">TANAKA TAX OFFICE</span>
+                  <span class="office-name-jp">田中太郎税理士事務所</span>
+                </div>
+            </div>
+            <button class="nav-toggle" aria-label="メニューを開閉する" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </button>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">トップページ</a></li>
+                    <li><a href="services.html">サービス・料金</a></li>
+                    <li><a href="office.html">事務所概要</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-title-section">
+            <div class="container">
+                <h1>お問い合わせ</h1>
+                <p>ご相談、ご依頼などお気軽にお問い合わせください。初回のご相談は無料です。</p>
+            </div>
+        </section>
+
+        <section id="contact-form" class="contact-form-section">
+            <div class="container">
+                <h2>お問い合わせフォーム</h2>
+                <form action="#" method="post" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">お名前 (必須)</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="company">会社名・屋号</label>
+                        <input type="text" id="company" name="company">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">メールアドレス (必須)</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">電話番号</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="service-type">ご相談内容の種別</label>
+                        <select id="service-type" name="service-type">
+                            <option value="">選択してください</option>
+                            <option value="startup">開業・法人設立支援</option>
+                            <option value="advisory">顧問契約</option>
+                            <option value="spot">スポット相談</option>
+                            <option value="other">その他</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">お問い合わせ内容 (必須)</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+                    <div class="form-group privacy-policy-agreement">
+                        <input type="checkbox" id="privacy-agree" name="privacy-agree" required>
+                        <label for="privacy-agree" style="font-weight: normal; margin-bottom: 0;">プライバシーポリシーに同意する</label> 
+                        <!-- Add link to privacy policy page/modal if available -->
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn-primary">送信する</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section id="other-contact-methods" class="other-contact-methods-section">
+            <div class="container">
+                <h2>お電話でのお問い合わせ</h2>
+                <p>お急ぎの場合は、お電話でも承っております。</p>
+                <p class="phone-number-large">XXX-XXXX-XXXX</p>
+                <p>(受付時間: 平日 9:00 〜 18:00)</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 田中太郎税理士事務所 All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+

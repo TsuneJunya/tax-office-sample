@@ -1,0 +1,631 @@
+:root {
+    --primary-blue: #3498db; /* Refreshing Blue from reference */
+    --dark-blue: #2c3e50; /* Darker, trustworthy blue */
+    --light-blue-bg: #eaf6ff; /* Lighter blue for backgrounds */
+    --accent-orange: #e67e22; /* Existing accent, might need adjustment or replacement */
+    --text-color: #333;
+    --light-text-color: #f9f9f9;
+    --border-color: #cce7ff; /* Lighter border color */
+}
+
+/* Global Styles */
+body {
+    font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    background-color: var(--light-text-color);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+h1, h2, h3, h4 {
+    color: var(--dark-blue);
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 0.75em;
+    border-bottom: 2px solid var(--primary-blue);
+    padding-bottom: 0.3em;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+a {
+    color: var(--primary-blue);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: var(--dark-blue);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Header & Navigation */
+header {
+    background-color: #ffffff;
+    padding: 0.8em 0; /* Adjusted padding */
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex; /* Changed from column to row */
+    align-items: center; /* Vertically align items in the middle */
+    gap: 10px; /* Space between logo image and text group */
+}
+
+.header-logo-img {
+    height: 50px; /* Adjust height as needed, e.g., 40px or 50px */
+    width: auto;
+}
+
+.logo-text-group {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2; /* Adjust line height for stacked text */
+}
+
+.logo-text {
+    font-size: 1.5em; /* Adjusted from 1.8em */
+    font-weight: bold;
+    color: var(--dark-blue);
+}
+
+.office-name-jp {
+    font-size: 0.8em; /* Adjusted from 0.85em */
+    color: var(--primary-blue);
+    font-weight: normal;
+    /* margin-top: 2px; Removed, relying on line-height of group */
+    letter-spacing: 0.5px;
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.main-nav li {
+    margin-left: 20px;
+}
+
+.main-nav a {
+    font-weight: bold;
+    font-size: 1em;
+    color: var(--dark-blue);
+}
+
+.main-nav a:hover {
+    color: var(--primary-blue);
+}
+
+.nav-toggle {
+    display: none; 
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--dark-blue);
+    margin: 5px 0;
+    transition: background-color 0.3s ease;
+}
+
+/* Hero Section */
+.hero {
+    color: var(--light-text-color);
+    text-align: center;
+    padding: 0;
+}
+
+.hero-image-container {
+    background-image: url('../images/hero.png');
+    background-size: cover;
+    background-position: center;
+    padding: 80px 20px;
+    position: relative;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-text-overlay {
+    background-color: rgba(44, 62, 80, 0.7);
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 1000px;
+}
+
+.hero-logo-container {
+    margin-bottom: 20px;
+}
+
+.hero-logo {
+    max-height: 80px;
+    width: auto;
+}
+
+.hero h1 {
+    font-size: 2.8em;
+    margin-bottom: 0.3em;
+    color: var(--light-text-color);
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.3em;
+    margin-bottom: 0;
+    color: #e0e0e0;
+}
+
+/* Common Section Styles */
+.page-title-section {
+    background-color: var(--light-blue-bg);
+    padding: 30px 0;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.page-title-section h1 {
+    margin-bottom: 0.2em;
+}
+
+.page-title-section p {
+    font-size: 1.1em;
+    color: var(--text-color);
+}
+
+.client-issues-section, 
+.representative-greeting-section, 
+.service-summary-section, 
+.contact-cta-section,
+.service-detail-section,
+.fee-policy-section,
+.representative-profile-section,
+.purpose-values-section,
+.office-information-section,
+.contact-form-section,
+.other-contact-methods-section {
+    padding: 40px 0;
+}
+
+.client-issues-section {
+    background-color: #fff;
+}
+
+.issue-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.issue-item {
+    background-color: var(--light-text-color);
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.issue-item img {
+    max-height: 60px;
+    margin-bottom: 15px;
+}
+
+.representative-greeting-section .greeting-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.representative-greeting-section .representative-photo img {
+    border-radius: 50%;
+    max-width: 200px;
+    border: 5px solid var(--light-blue-bg);
+}
+
+.representative-greeting-section .greeting-text {
+    flex: 1;
+}
+
+.service-summary-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-summary-item {
+    background-color: var(--light-blue-bg);
+    padding: 25px;
+    border-radius: 8px;
+}
+
+.contact-cta-section {
+    background-color: var(--dark-blue);
+    color: var(--light-text-color);
+    text-align: center;
+}
+
+.contact-cta-section h2 {
+    color: var(--light-text-color);
+    border-bottom: none;
+}
+
+.contact-cta-section .phone-number {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+/* Buttons */
+.btn, .btn-primary, .btn-secondary {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn {
+    background-color: var(--primary-blue);
+    color: var(--light-text-color);
+    border: 2px solid var(--primary-blue);
+}
+.btn:hover {
+    background-color: var(--dark-blue);
+    border-color: var(--dark-blue);
+    text-decoration: none;
+}
+
+.btn-primary {
+    background-color: var(--accent-orange);
+    color: var(--light-text-color);
+    border: 2px solid var(--accent-orange);
+}
+.btn-primary:hover {
+    background-color: #d35400;
+    border-color: #d35400;
+    text-decoration: none;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--primary-blue);
+    border: 2px solid var(--primary-blue);
+}
+.btn-secondary:hover {
+    background-color: var(--primary-blue);
+    color: var(--light-text-color);
+    text-decoration: none;
+}
+
+/* Service Detail Page */
+.service-detail-section {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--border-color);
+}
+.service-detail-section:last-of-type {
+    border-bottom: none;
+}
+
+.service-overview {
+    font-size: 1.1em;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.service-content ul {
+    list-style: disc;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.price-note, .price-table-intro, .small-note {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.price-note .btn {
+    margin-top: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    border: 1px solid var(--border-color);
+    padding: 10px 12px;
+    text-align: left;
+}
+
+table th {
+    background-color: var(--light-blue-bg);
+    font-weight: bold;
+    color: var(--dark-blue);
+}
+
+table td[colspan="2"], table td[colspan="3"] {
+    text-align: center;
+    font-style: italic;
+}
+
+/* Fee Policy Section */
+.fee-policy-section .policy-item {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+.fee-policy-section .policy-item img {
+    float: left;
+    margin-right: 15px;
+    max-height: 40px;
+}
+
+/* Office Page */
+.representative-profile-section .profile-content {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.representative-profile-section .representative-photo-large img {
+    max-width: 250px;
+    border-radius: 8px;
+    border: 5px solid var(--light-blue-bg);
+}
+
+.purpose-values-section .purpose-statement, 
+.purpose-values-section .values-statement {
+    margin-bottom: 30px;
+    background-color: var(--light-blue-bg);
+    padding: 25px;
+    border-radius: 8px;
+}
+
+.purpose-values-section .values-statement ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.purpose-values-section .values-statement li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.purpose-values-section .values-statement li::before {
+    content: "\2713";
+    color: var(--primary-blue);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.office-information-section table th {
+    width: 25%;
+}
+
+/* Contact Page */
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form input[type="tel"]:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.privacy-policy-agreement {
+    display: flex;
+    align-items: center;
+}
+
+.privacy-policy-agreement input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+.other-contact-methods-section {
+    text-align: center;
+    background-color: var(--light-blue-bg);
+}
+
+.phone-number-large {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: var(--dark-blue);
+    margin: 10px 0;
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-blue);
+    color: var(--light-text-color);
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .logo {
+        /* align-items: center; Keep flex-start for mobile if text wraps */
+    }
+    .header-logo-img {
+        height: 40px; /* Slightly smaller logo for mobile */
+    }
+    .logo-text-group {
+        line-height: 1.1;
+    }
+    .logo-text {
+        font-size: 1.2em; /* Adjusted for mobile */
+    }
+    .office-name-jp {
+        font-size: 0.7em; /* Adjusted for mobile */
+    }
+
+    .main-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        border-top: 1px solid var(--border-color);
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .main-nav.active {
+        display: block;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+    }
+
+    .main-nav li {
+        margin: 0;
+        text-align: center;
+    }
+
+    .main-nav a {
+        display: block;
+        padding: 15px;
+        border-bottom: 1px solid var(--border-color);
+    }
+    .main-nav li:last-child a {
+        border-bottom: none;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+    .hero p {
+        font-size: 1.1em;
+    }
+    .hero-image-container {
+        min-height: 300px;
+        padding: 60px 15px;
+    }
+
+    .representative-greeting-section .greeting-content,
+    .representative-profile-section .profile-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .representative-greeting-section .representative-photo img,
+    .representative-profile-section .representative-photo-large img {
+        margin: 0 auto 20px auto;
+    }
+
+    .issue-items,
+    .service-summary-items {
+        grid-template-columns: 1fr;
+    }
+
+    .fee-policy-section .policy-item img {
+        float: none;
+        display: block;
+        margin: 0 auto 10px auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-logo-img {
+        height: 35px; /* Even smaller for very small screens */
+    }
+    .logo-text {
+        font-size: 1em;
+    }
+    .office-name-jp {
+        font-size: 0.65em;
+    }
+    header .container {
+        flex-wrap: wrap; /* Allow nav toggle to wrap if needed */
+        justify-content: space-between;
+    }
+    .logo {
+        flex-basis: calc(100% - 60px); /* Adjust based on nav toggle size */
+    }
+    .nav-toggle {
+        /* Ensure it's properly aligned */
+    }
+}
+
